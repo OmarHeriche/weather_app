@@ -14,8 +14,8 @@ button.addEventListener("click",function() {
     .then(
         (data)=>{
             cityName.innerHTML = `city name : ${data.name}`;
-            if(data.name===undefined){alert("rak 3mitha")}
-            desc.innerHTML=`weather ki rahou hannouni : ${data.weather[0].description}`
+            if(data.name===undefined){alert("invalid name")}
+            desc.innerHTML=`the weather: ${data.weather[0].description}`
             temp.innerHTML=`temperature : ${Math.ceil(data.main.temp- 273.15)}`
             hum.innerHTML=`humidity : ${data.main.humidity}`;
             dat.innerHTML=`Date : ${pilila.getDate()}/${pilila.getMonth()+1}/${pilila.getFullYear()}`;
